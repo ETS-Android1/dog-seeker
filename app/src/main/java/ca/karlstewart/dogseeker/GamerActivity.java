@@ -4,11 +4,11 @@
 
 package ca.karlstewart.dogseeker;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GamerActivity extends AppCompatActivity {
 
@@ -19,7 +19,6 @@ public class GamerActivity extends AppCompatActivity {
     }
 
     public static Intent makeIntent(Context c) {
-        Intent gamerIntent = new Intent(c, MenuActivity.class);
-        return gamerIntent;
+        return new Intent(c, GamerActivity.class);
     }
 }

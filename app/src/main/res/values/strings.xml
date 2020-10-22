@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Dog Seeker</string>
+    <string name="menu_text_title">Dog Seeker</string>
+    <string name="menu_text_title_sub">Interpol Pet:</string>
+    <string name="menu_button_help">About</string>
+    <string name="menu_button_options">Options</string>
+    <string name="menu_button_play">Play</string>
+    <string name="help_text_about">
+        <p>Dog Seeker created by Karl Stewart for CMPT 276:\n
+            <a href="https://opencoursehub.cs.sfu.ca/jackt/grav-cms/cmpt276-2/home">Course Homepage</a>\n</p>\n
+        <b>INTERPOL PET</b> has called you in for \"one last mission\".\n
+        <b>You must pet every dog.</b>\n
+        <p>You take a department issued <b>PET</b> energy scanner, plastics faded with time, from your desk\.\.\.</p>\n
+        <p>How does this thing work again?\n\n</p>
+        <b>Scanning for dogs:</b>\n
+        Each level has a set amount of hidden dogs.\n
+        <p>1. Tap a cell to reveal any hidden dogs!\n</p>
+        <p>2. If the cell doesn\'t have a hidden dog, the <b>PET</b> scanner will send out a dog radar pulse, updating the cell with the number of dogs in that cell\'s row and column.\n</p>
+        <b>Pet all dogs with as few PET scans as possible.</b>
+    </string>
+    <string name="help_text_about_title">About Dog Seeker</string>
+    <string name="options_text_title">Options</string>
+    <string name="options_text_board_size">Board Size</string>
+    <string name="options_radio_1_4x6">4 x 6</string>
+    <string name="options_radio_2_5x10">5 x 10</string>
+    <string name="options_radio_2_6x15">6 x 15</string>
+    <string name="options_text_dog_count">Dog Count</string>
+    <string name="options_dog_6">6 Dogs</string>
+    <string name="options_dog_10">10 Dogs</string>
+    <string name="options_dog_15">15 Dogs</string>
+    <string name="options_dog_20">20 Dogs</string>
+    <string name="gamer_text_found_dogs">Found Dogs:</string>
+    <string name="gamer_text_scans">PET Scans Used:</string>
+    <string name="gamer_text_plays">Times Played :</string>
+    <string name="splash_text_skip">Tap anywhere to skip...</string>
 </resources>
