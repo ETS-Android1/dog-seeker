@@ -59,7 +59,7 @@
             android:text="@string/options_radio_2_5x10" />
 
         <RadioButton
-            android:id="@+id/oprtionsSize3"
+            android:id="@+id/optionsSize3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -84,9 +84,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsTextDogCount">
@@ -119,5 +117,14 @@
             android:layout_weight="1"
             android:text="@string/options_dog_20" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/optionsButtonResetPlays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/optionsDogCountGroup"
+        app:layout_constraintTop_toBottomOf="@+id/optionsDogCountGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,6 +52,11 @@ public class GameOptions {
         return instance;
     }
 
+    // Wrapper for getInstance(String json). Uses default initialization if no instance exists yet
+    public static GameOptions getInstance() {
+        return getInstance("");
+    }
+
     // Returns a JSON serialization of the current instance
     public String toJson() {
         Gson gson = new Gson();
@@ -69,6 +74,7 @@ public class GameOptions {
         {
             if (boardScores.first.equals(currBoardString)) {
                 // Found matching scores for this board configuration
+                //noinspection UnusedAssignment
                 foundMatchingBoard = true;
                 TreeSet<Integer> scores = boardScores.second;
 
@@ -97,13 +103,18 @@ public class GameOptions {
                 }
             }
         }
-        if (foundMatchingBoard == false) {
+
+        if (!foundMatchingBoard) {
             // Add new board configuration to scoresByBoard
             TreeSet<Integer> newScoreTree = new TreeSet<Integer>();
             newScoreTree.add(newScore);
             scoresByBoard.add(new Pair<String, TreeSet<Integer>>(currBoardString, newScoreTree));
         }
         return true;
+    }
+    // Reset score list to an empty state
+    public void resetScores() {
+        scoresByBoard.clear();
     }
 
     // Getter for numDogs option
@@ -152,5 +163,9 @@ public class GameOptions {
     // Adds 1 to totalPlays
     public void addNewPlay() {
         this.totalPlays++;
+    }
+    // Reset totalPlays to 0
+    public void resetTotalPlays() {
+        totalPlays = 0;
     }
 }

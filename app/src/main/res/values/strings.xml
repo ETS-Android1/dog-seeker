@@ -29,4 +29,8 @@
     <string name="options_dog_10">10 Dogs</string>
     <string name="options_dog_15">15 Dogs</string>
     <string name="options_dog_20">20 Dogs</string>
+    <string name="gamer_text_found_dogs">Found Dogs:</string>
+    <string name="gamer_text_scans">PET Scans Used:</string>
+    <string name="gamer_text_plays">Times Played :</string>
+    <string name="splash_text_skip">Tap anywhere to skip...</string>
 </resources>

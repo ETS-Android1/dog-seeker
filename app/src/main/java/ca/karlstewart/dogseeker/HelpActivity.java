@@ -4,14 +4,14 @@
 
 package ca.karlstewart.dogseeker;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.Window;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class HelpActivity extends AppCompatActivity {
 
@@ -30,7 +30,6 @@ public class HelpActivity extends AppCompatActivity {
     }
 
     public static Intent makeIntent(Context c) {
-        Intent helpIntent = new Intent(c, HelpActivity.class);
-        return helpIntent;
+        return new Intent(c, HelpActivity.class);
     }
 }

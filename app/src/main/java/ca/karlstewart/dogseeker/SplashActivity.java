@@ -15,32 +15,33 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
-    MediaPlayer audioIntro;
-
+    MediaPlayer splashAudio;
+    VideoView splashVideo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Handler handler = new Handler();
         View topView = findViewById(R.id.splashTopView);
         topView.setOnClickListener((View v) -> { goToMenuActivity(); });
-        VideoView vid = setupSplashVideo();
-        MediaPlayer audio = setupSplashAudio();
 
-        vid.setOnPreparedListener( (MediaPlayer mp) -> {
-            vid.start();
-            handler.postDelayed(() -> {
-                vid.setAlpha(1);
-                audio.start();
-            },250);
+        setupSplashVideo().start();
+        setupSplashAudio();
+    }
+
+    @Override
+    protected void onResume() {
+        // Unhide splashVideo after giving it 300 ms to load
+        splashVideo.setOnPreparedListener( (MediaPlayer mp) -> {
+            splashAudio.start();
+            new Handler().postDelayed( () -> {splashVideo.setAlpha(1);}, 300);
         });
 
-
+        super.onResume();
     }
 
     private VideoView setupSplashVideo() {
-        VideoView splashVideo = (VideoView) findViewById(R.id.splashVideo);
+        splashVideo = (VideoView) findViewById(R.id.splashVideo);
         splashVideo.setOnCompletionListener( (MediaPlayer mp) -> {
             goToMenuActivity();
         });
@@ -49,8 +50,8 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private MediaPlayer setupSplashAudio() {
-        audioIntro = MediaPlayer.create(SplashActivity.this, R.raw.music_splash_intro);
-        return audioIntro;
+        splashAudio = MediaPlayer.create(SplashActivity.this, R.raw.music_splash_intro);
+        return splashAudio;
     }
 
     private void goToMenuActivity(){
