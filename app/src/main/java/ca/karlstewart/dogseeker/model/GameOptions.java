@@ -4,5 +4,5 @@
 */
 package ca.karlstewart.dogseeker.model;
 
-public class GamerOptions {
+public class GameOptions {
 }

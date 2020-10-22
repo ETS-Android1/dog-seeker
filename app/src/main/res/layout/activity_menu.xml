@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Interpol Pet:"
+        android:text="@string/menu_title_sub_text"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,36 +25,36 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Dog Seeker"
+        android:text="@string/menu_title_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         app:layout_constraintEnd_toEndOf="@+id/menuTitleSubText"
         app:layout_constraintStart_toStartOf="@+id/menuTitleSubText"
         app:layout_constraintTop_toBottomOf="@+id/menuTitleSubText" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/menuButtonPlay"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/menu_button_play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuTitleText" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:id="@+id/menuButtonOptions"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/menu_button_options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/menuButtonPlay" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:id="@+id/menuButtonAbout"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/menu_button_help"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/menuButtonOptions" />
 </androidx.constraintlayout.widget.ConstraintLayout>

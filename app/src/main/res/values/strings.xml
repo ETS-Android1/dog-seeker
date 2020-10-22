@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dog Seeker</string>
+    <string name="menu_title_text">Dog Seeker</string>
+    <string name="menu_title_sub_text">Interpol Pet:</string>
+    <string name="menu_button_help">About</string>
+    <string name="menu_button_options">Options</string>
+    <string name="menu_button_play">Play</string>
 </resources>
