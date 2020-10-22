@@ -19,7 +19,7 @@ public class GamerActivity extends AppCompatActivity {
     }
 
     public static Intent makeIntent(Context c) {
-        Intent gamerIntent = new Intent(c, MenuActivity.class);
+        Intent gamerIntent = new Intent(c, GamerActivity.class);
         return gamerIntent;
     }
 }

@@ -9,17 +9,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Window;
 
 public class OptionsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_options);
+
     }
 
     public static Intent makeIntent(Context c) {
-        Intent optionsIntent = new Intent(c, MenuActivity.class);
+        Intent optionsIntent = new Intent(c, OptionsActivity.class);
         return optionsIntent;
     }
 }
