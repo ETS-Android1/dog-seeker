@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:backgroundTint="#B0FFFFFF"
+    android:backgroundTint="#D3FFFFFF"
     android:backgroundTintMode="src_atop"
     tools:context=".GamerActivity">
 
@@ -47,11 +47,24 @@
         android:id="@+id/gamerTextPlays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:text="@string/gamer_text_plays"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamerTableButtons" />
+
+    <TextView
+        android:id="@+id/gamerTextHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/gamer_text_high_scores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gamerTextPlays" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

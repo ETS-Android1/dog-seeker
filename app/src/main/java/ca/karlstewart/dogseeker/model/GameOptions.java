@@ -59,10 +59,39 @@ public class GameOptions {
         return gson.toJson(instance);
     }
 
+    // Return best score for current config
+    public int getHighScore() {
+        // Get board descriptor string for storing in highscore table
+        String currBoardString = String.format(Locale.getDefault(), "%d %d x %d", numDogs, boardWidth, boardHeight);
+        for (Pair<String, TreeSet<Integer>> boardScores : scoresByBoard)
+        {
+            if (boardScores.first.equals(currBoardString)) {
+                // Found matching scores for this board configuration
+                TreeSet<Integer> scores = boardScores.second;
+                return scores.first();
+            }
+        }
+        return -1;
+    }
+
+    // Return best scores for current config in a TreeSet
+    public TreeSet<Integer> getHighScores() {
+        // Get board descriptor string for storing in highscore table
+        String currBoardString = String.format(Locale.getDefault(), "%d %d x %d", numDogs, boardWidth, boardHeight);
+        TreeSet<Integer> scores = new TreeSet<>();
+        for (Pair<String, TreeSet<Integer>> boardScores : scoresByBoard)
+        {
+            if (boardScores.first.equals(currBoardString)) {
+                // Found matching scores for this board configuration
+                scores = (TreeSet<Integer>) boardScores.second.clone();
+            }
+        }
+        return scores;
+    }
     // Add score to score list, returns true if newScore is a high score, false otherwise
     public boolean addScore(int newScore) {
         // Create board descriptor string for storing in highscore table
-        String currBoardString = String.format(Locale.getDefault(), "%d x %d", boardWidth, boardHeight);
+        String currBoardString = String.format(Locale.getDefault(), "%d %d x %d", numDogs, boardWidth, boardHeight);
 
         // Search through scoresByBoard for matching game board size
         boolean foundMatchingBoard = false;

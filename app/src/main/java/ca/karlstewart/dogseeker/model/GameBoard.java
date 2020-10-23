@@ -107,4 +107,6 @@ public class GameBoard {
     public int getScansUsed() {
         return scansUsed;
     }
+
+
 }

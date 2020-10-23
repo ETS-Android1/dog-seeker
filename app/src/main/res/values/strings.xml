@@ -43,4 +43,6 @@
     <string name="options_toast_dog_count_updated">Dog Count Updated!</string>
     <string name="gamer_text_victory">All dogs pet!</string>
     <string name="splash_text_credit">by Karl Stewart</string>
+    <string name="gamer_text_high_scores">High Score for %d x %d Board with %d Dogs: %s</string>
+    <string name="gamer_text_high_scores_none">No high score for this board! Make INTERPOL PET history.</string>
 </resources>

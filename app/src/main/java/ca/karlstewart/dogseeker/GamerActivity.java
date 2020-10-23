@@ -53,6 +53,25 @@ public class GamerActivity extends AppCompatActivity {
 
         TextView textPlays = (TextView) findViewById(R.id.gamerTextPlays);
         textPlays.setText( getString(R.string.gamer_text_plays, GameOptions.getInstance().getTotalPlays()) );
+
+        TextView textHighScore = (TextView) findViewById(R.id.gamerTextHighScore);
+        if (GameOptions.getInstance().getHighScore() > 0) {
+            // Build string containing high scores
+            String scoreText = "\n";
+            int i = 1;
+            for (Integer score : GameOptions.getInstance().getHighScores()) {
+                scoreText = scoreText.concat(String.format(Locale.getDefault(),"%d. %d\t\t", i, score));
+                i++;
+            }
+            textHighScore.setText(getString(R.string.gamer_text_high_scores,
+                    GameOptions.getInstance().getBoardHeight(),
+                    GameOptions.getInstance().getBoardWidth(),
+                    GameOptions.getInstance().getNumDogs(),
+                    scoreText));
+        }
+        else {
+            textHighScore.setText(R.string.gamer_text_high_scores_none);
+        }
     }
 
     public void setupTileButtons() {
@@ -152,9 +171,10 @@ public class GamerActivity extends AppCompatActivity {
                                     .setTitle("Congratulations!")
                                     .setMessage(R.string.gamer_text_victory)
                                     .setIcon(R.drawable.gamer_dog_deep)
-                                    .setNeutralButton("Back to Main Menu", new DialogInterface.OnClickListener() {
+                                    .setNeutralButton("Back to Main Menu", null)
+                                    .setOnDismissListener(new DialogInterface.OnDismissListener() {
                                         @Override
-                                        public void onClick(DialogInterface dialog, int which) {
+                                        public void onDismiss(DialogInterface dialog) {
                                             GamerActivity.this.finish();
                                         }
                                     })
