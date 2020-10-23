@@ -31,6 +31,12 @@
     <string name="options_dog_20">20 Dogs</string>
     <string name="gamer_text_found_dogs">Found Dogs:</string>
     <string name="gamer_text_scans">PET Scans Used:</string>
-    <string name="gamer_text_plays">Times Played :</string>
+    <string name="gamer_text_plays">Times Played:</string>
     <string name="splash_text_skip">Tap anywhere to skip...</string>
+    <string name="options_button_reset_plays">Reset Play Count</string>
+    <string name="options_button_reset_scores">Reset High Scores</string>
+    <string name="options_toast_reset_plays">Play count reset!</string>
+    <string name="options_toast_reset_scores">High scores reset!</string>
+    <string name="options_toast_size_updated">Board Size Updated!</string>
+    <string name="options_toast_dog_count_updated">Dog Count Updated!</string>
 </resources>

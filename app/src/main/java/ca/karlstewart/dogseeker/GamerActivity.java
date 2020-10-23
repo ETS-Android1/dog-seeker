@@ -16,6 +16,12 @@ public class GamerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gamer);
+
+        setupTextDisplays();
+    }
+
+    private void setupTextDisplays() {
+
     }
 
     public static Intent makeIntent(Context c) {

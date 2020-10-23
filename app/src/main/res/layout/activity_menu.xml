@@ -23,7 +23,6 @@
         android:id="@+id/menuTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/menu_text_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"

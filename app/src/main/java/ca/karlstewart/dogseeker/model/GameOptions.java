@@ -38,13 +38,9 @@ public class GameOptions {
     public static GameOptions getInstance(String optionsJson) {
         if (instance == null) {
             // Create new GameOptions instance
-            if (optionsJson.equals("")) {
-                // No saved preferences, fill with defaults
-                instance = new GameOptions();
-            }
-            else
-            {
-                // Deserialize gson into fields.
+            instance = new GameOptions();
+            if (!optionsJson.equals("")) {
+                // json provided, deserialize json into fields.
                 Gson gson = new Gson();
                 instance = gson.fromJson(optionsJson, instance.getClass());
             }
@@ -154,6 +150,12 @@ public class GameOptions {
             throw new IllegalArgumentException("boardHeight must be greater than 0");
         }
         this.boardHeight = boardHeight;
+    }
+
+    // Setter for board height and width
+    public void setBoardSize(int width, int height) {
+        boardWidth = width;
+        boardHeight = height;
     }
 
     // Getter for totalPlays
