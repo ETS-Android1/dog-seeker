@@ -34,7 +34,7 @@ public class OptionsActivity extends AppCompatActivity {
     // Updates options UI with current settings in GameOptions
     private void showCurrentOptions() {
         GameOptions currOptions = GameOptions.getInstance();
-        switch (currOptions.getBoardWidth()) {
+        switch (currOptions.getBoardHeight()) {
             case 4:
                 ((RadioButton) findViewById(R.id.optionsSize1)).setChecked(true);
                 break;
@@ -53,11 +53,14 @@ public class OptionsActivity extends AppCompatActivity {
                 ((RadioButton) findViewById(R.id.optionsDog6)).setChecked(true);
                 break;
             case 10:
-                ((RadioButton) findViewById(R.id.optionsDog6)).setChecked(true);
+                ((RadioButton) findViewById(R.id.optionsDog10)).setChecked(true);
+                break;
             case 15:
-                ((RadioButton) findViewById(R.id.optionsDog6)).setChecked(true);
+                ((RadioButton) findViewById(R.id.optionsDog15)).setChecked(true);
+                break;
             case 20:
-                ((RadioButton) findViewById(R.id.optionsDog6)).setChecked(true);
+                ((RadioButton) findViewById(R.id.optionsDog20)).setChecked(true);
+                break;
             default:
                 Log.w("OptionsActivity", "Unknown board size in GameOptions");
                 break;
@@ -67,15 +70,15 @@ public class OptionsActivity extends AppCompatActivity {
     private void setupOptionButtons() {
         // Setup Size Options
         ((RadioButton) findViewById(R.id.optionsSize1)).setOnClickListener( (View v) -> {
-            GameOptions.getInstance().setBoardSize(4,6);
+            GameOptions.getInstance().setBoardSize(6,4);
             shortToast(R.string.options_toast_size_updated);
         });
         ((RadioButton) findViewById(R.id.optionsSize2)).setOnClickListener( (View v) -> {
-            GameOptions.getInstance().setBoardSize(5,10);
+            GameOptions.getInstance().setBoardSize(10,5);
             shortToast(R.string.options_toast_size_updated);
         });
         ((RadioButton) findViewById(R.id.optionsSize3)).setOnClickListener( (View v) -> {
-            GameOptions.getInstance().setBoardSize(6,15);
+            GameOptions.getInstance().setBoardSize(15,6);
             shortToast(R.string.options_toast_size_updated);
         });
 

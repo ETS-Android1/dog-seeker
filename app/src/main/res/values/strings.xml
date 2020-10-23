@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name">Dog Seeker</string>
     <string name="menu_text_title">Dog Seeker</string>
-    <string name="menu_text_title_sub">Interpol Pet:</string>
+    <string name="menu_text_title_sub">Interpol Pet (Pet EveryThing):</string>
     <string name="menu_button_help">About</string>
     <string name="menu_button_options">Options</string>
     <string name="menu_button_play">Play</string>
     <string name="help_text_about">
         <p>Dog Seeker created by Karl Stewart for CMPT 276:\n
-            <a href="https://opencoursehub.cs.sfu.ca/jackt/grav-cms/cmpt276-2/home">Course Homepage</a>\n</p>\n
+            <a href="https://opencoursehub.cs.sfu.ca/jackt/grav-cms/cmpt276-2/home">Course Homepage</a>\n\n
+            Image and sound assets are by Toby Fox.\nUsed under license for a non-commercial fan-game.\n
+            <a href="https://www.undertale.com">undertale.com\n\n</a></p>
         <b>INTERPOL PET</b> has called you in for \"one last mission\".\n
         <b>You must pet every dog.</b>\n
         <p>You take a department issued <b>PET</b> energy scanner, plastics faded with time, from your desk\.\.\.</p>\n
@@ -29,9 +31,9 @@
     <string name="options_dog_10">10 Dogs</string>
     <string name="options_dog_15">15 Dogs</string>
     <string name="options_dog_20">20 Dogs</string>
-    <string name="gamer_text_found_dogs">Found Dogs:</string>
-    <string name="gamer_text_scans">PET Scans Used:</string>
-    <string name="gamer_text_plays">Times Played:</string>
+    <string name="gamer_text_found_dogs">Found Dogs: %d</string>
+    <string name="gamer_text_scans">PET Scans Used: %d</string>
+    <string name="gamer_text_plays">Times Played: %d</string>
     <string name="splash_text_skip">Tap anywhere to skip...</string>
     <string name="options_button_reset_plays">Reset Play Count</string>
     <string name="options_button_reset_scores">Reset High Scores</string>
@@ -39,4 +41,6 @@
     <string name="options_toast_reset_scores">High scores reset!</string>
     <string name="options_toast_size_updated">Board Size Updated!</string>
     <string name="options_toast_dog_count_updated">Dog Count Updated!</string>
+    <string name="gamer_text_victory">All dogs pet!</string>
+    <string name="splash_text_credit">by Karl Stewart</string>
 </resources>

@@ -28,8 +28,8 @@ public class GameOptions {
     // Default initialization of member variables
     private GameOptions(){
         scoresByBoard = new ArrayList<Pair<String, TreeSet<Integer>>>();
-        boardWidth = 4;
-        boardHeight = 6;
+        boardHeight = 4;
+        boardWidth = 6;
         numDogs = 6;
         totalPlays = 0;
     }
