@@ -43,6 +43,8 @@ public class SplashActivity extends AppCompatActivity {
     private VideoView setupSplashVideo() {
         splashVideo = (VideoView) findViewById(R.id.splashVideo);
         splashVideo.setOnCompletionListener( (MediaPlayer mp) -> {
+            // Remove tap to skip option while already moving to main menu
+            findViewById(R.id.splashTopView).setOnClickListener(null);
             goToMenuActivity();
         });
         splashVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_splash));
